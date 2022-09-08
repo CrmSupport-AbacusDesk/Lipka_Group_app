@@ -1,0 +1,1 @@
+# Lipka_Group_app

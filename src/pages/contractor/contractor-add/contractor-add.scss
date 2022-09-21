@@ -1,0 +1,26 @@
+page-contractor-add {
+    
+    .sprate-block {
+        padding:10px;
+        border: 1px dashed #2e5ea2;
+        border-radius: 6px;
+        margin-top: 16px;
+    }
+
+    .item-flex{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        grid-column-gap: 10px;
+    }
+
+    .item-label-floating .select-md{
+        padding: 8px !important;
+    }
+
+    .upload-document{
+        background: #fff;
+        border: 0px;
+    }
+}

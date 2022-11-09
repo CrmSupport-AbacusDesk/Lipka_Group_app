@@ -38,6 +38,9 @@
                         {{'Points Received Type' | translate}}
                     </ion-list-header>
                     
+                    
+
+
                     <ion-item>
                         <ion-label><img src="assets/imgs/paytm.png">{{'Paytm' | translate}}</ion-label>
                         <ion-radio value="Paytm"></ion-radio>
@@ -57,6 +60,11 @@
                         <ion-label><img src="assets/imgs/home-icon/gift.svg">{{'Gift' | translate}}</ion-label>
                         <ion-radio value="Gift"></ion-radio>
                     </ion-item>
+
+                    <ion-item>
+                        <ion-label><img src="assets/imgs/upi.png">{{'UPI ID' | translate}}</ion-label>
+                        <ion-radio value="UPI ID"></ion-radio>
+                    </ion-item>
                 </ion-list>
                 
                 
@@ -74,6 +82,17 @@
                             <input class="pl16 radius-none" type="tel" name="payment_number" placeholder="{{data.payment_type}} Number" #payment_number="ngModel" [(ngModel)]="data.payment_number" minlength="10" maxlength="10"  required>
                             <div class="otp-error" *ngIf="!payment_number && otp?.payment_number">
                                 <p>{{data.payment_type}} number required</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="data.payment_type == 'UPI ID'">
+                    <div class="input-section">
+                        <div class="input-adjust m0">
+                            <input class="pl16 radius-none" type="text" name="upi_id" placeholder="UPI ID" #upi_id="ngModel" [(ngModel)]="data.upi_id"   required>
+                            <div class="otp-error" *ngIf="!upi_id && otp?.upi_id">
+                                <p>{{'This Feild is required' | translate}}</p>
                             </div>
                         </div>
                     </div>
@@ -107,7 +126,7 @@
                 </div>
                 <div class="footer-btn">
                     <a class="outline-btn" (click)="dismiss()">{{'No' | translate}}</a>
-                    <button class="fill-btn" [disabled]="!data.check ||!data.otp ||!otp_value || payment_number == '' || karigar_detail.document_image == '' || karigar_detail.document_no == '' " (click)="f.form.valid && submit()">{{'Yes' | translate}}</button>
+                    <button class="fill-btn" [disabled]="!data.check ||!data.otp ||!otp_value || payment_number == '' || upi_id == '' || karigar_detail.document_image == '' || karigar_detail.document_no == '' " (click)="f.form.valid && submit()">{{'Yes' | translate}}</button>
                 </div>
             </form>
         </div>

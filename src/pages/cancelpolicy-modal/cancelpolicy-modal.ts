@@ -101,8 +101,6 @@ export class CancelpolicyModalPage {
     {
         
         this.presentLoading();
-        console.log('data');
-        console.log(this.data);
         
         if(this.karigar_detail.user_type == 2){
             this.data.payment_type= "Gift";

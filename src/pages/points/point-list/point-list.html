@@ -25,9 +25,9 @@
           <span>{{ 'Scanned Points' | translate }}</span>
         </ion-segment-button>
         
-        <ion-segment-button  value="referral">
+        <!-- <ion-segment-button  value="referral">
           <span>{{ 'Other Points' | translate }}</span>
-        </ion-segment-button>
+        </ion-segment-button> -->
       </ion-segment>
     </div>
     
@@ -50,7 +50,7 @@
         </div>
       </ng-container>
       
-      <ng-container  *ngSwitchCase="'referral'">
+      <!-- <ng-container  *ngSwitchCase="'referral'">
         <div class="no-history" *ngIf="ref_kar.length == 0">
           <img src="assets/imgs/history.png">
           <p>{{'No History' | translate}}</p>
@@ -63,7 +63,7 @@
           </div>
           <div class="pts">{{row.coupon_value}} PT</div>
         </div>
-      </ng-container>
+      </ng-container> -->
     </div>
     
     

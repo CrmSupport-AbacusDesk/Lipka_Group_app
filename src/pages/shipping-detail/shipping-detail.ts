@@ -86,8 +86,9 @@ export class ShippingDetailPage {
               this.receive_status=r['karigar_gift'].receive_status;
             }
             console.log(this.receive_status);
+            // this.karigar_gift.gift_points = parseInt( this.gift_detail.gift_points );
             console.log(this.gift_detail);
-            this.gift_detail.coupon_points = parseInt( this.gift_detail.coupon_points );
+
           });
         }
         // recvConfirmation(gift_id, redeem_type)

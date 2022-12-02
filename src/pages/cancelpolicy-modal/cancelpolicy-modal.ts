@@ -100,14 +100,30 @@ export class CancelpolicyModalPage {
     submit()
     {
         
-        this.presentLoading();
         
-        if(this.karigar_detail.user_type == 2){
-            this.data.payment_type= "Gift";
-        }
+        
+        // if(this.karigar_detail.user_type == 2){
+        //     this.data.payment_type= "Gift";
+        // }
+ if(this.data.payment_type == 'UPI ID'){
+    if(!this.data.upi_id ){
+        this.showAlert("Please Enter UPI ID");
+            return;
+    }
+}
+
+else if(this.data.payment_type == 'Paytm' || this.data.payment_type == 'PhonePe' || this.data.payment_type == 'Google Pay'){
+   if(!this.data.payment_number){
+    this.showAlert("Please Enter Payment Number");
+    return;   
+
+   }
+        
+}
+       this.presentLoading();
         this.data.karigar_id = this.service.karigar_id,
         this.data.gift_id = this.gift_id,
-        this.data.redeem_type = this.redeemType
+        // this.data.redeem_type = this.redeemType
         this.data.redeem_amount=  this.redeemPoint
         this.data.offer_id = this.gift_detail.offer_id,
         console.log('data');
@@ -128,6 +144,7 @@ export class CancelpolicyModalPage {
             }
         });
     }
+    
     showAlert(text) {
         let alert = this.alertCtrl.create({
             title:'Alert!',
@@ -144,7 +161,7 @@ export class CancelpolicyModalPage {
                 text:'OK',
                 cssClass: 'close-action-sheet',
                 handler:()=>{
-                    this.navCtrl.push(TransactionPage);
+                    // this.navCtrl.push(TransactionPage);
                 }
             }]
         });

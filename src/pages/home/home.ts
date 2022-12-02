@@ -478,7 +478,7 @@ export class HomePage {
             let alert = this.alertCtrl.create({
                 title:'Sorry!',
                 cssClass:'action-close',
-                subTitle:"Your current profile status is  <strong class=Suspect>“Suspect”</strong>. You can only see the scan history  when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:18002122830>1800-212-2830</a> or chat with us.",
+                subTitle:"Your current profile status isgoRedeemType  <strong class=Suspect>“Suspect”</strong>. You can only see the scan history  when your profile status is <strong class=Approved>“Verified”</strong>. To know more, you can call us at <a href=tel:18002122830>1800-212-2830</a> or chat with us.",
                 buttons: [
                     // {
                     //     text: 'Chat With Us',
@@ -801,14 +801,16 @@ export class HomePage {
             alert.present();  
             return
         }
-       else if(this.karigar_detail.user_type ==1 && this.karigar_detail.status =='Verified'){
+       else if(this.karigar_detail.status =='Verified'){
             this.navCtrl.push(RedeemTypePage,{'mode':'home',"balance_point":this.total_balance_point, "redeem_point":this.karigar_detail.redeem_balance});
 
+            // this.navCtrl.push(GiftListPage,{'mode':'home'});
+
         }
 
-        else {
-            this.navCtrl.push(GiftListPage,{'mode':'home'});
-        }
+        // else {
+        //     this.navCtrl.push(GiftListPage,{'mode':'home'});
+        // }
     }
     share()
     {

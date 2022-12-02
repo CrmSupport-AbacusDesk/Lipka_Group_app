@@ -520,8 +520,8 @@ ion-slides {
 span {
     &.custom-point {
         position: absolute;
-        top: 11px;
-        right: 44px;
+        top: 0px;
+        right: 50px;
         background: #fff;
         padding: 0px 3px;
         font-size: 11px;
@@ -1452,16 +1452,16 @@ button {
         font-weight: $semibold;
         padding-bottom: 30px !important;
     }
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -18px;
-        right: 10px;
-        background: url(../assets/icons/surprise.svg) no-repeat center;
-        width: 70px;
-        height: 97px;
-        background-size: cover;
-    }
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -18px;
+    //     right: 10px;
+    //     background: url(../assets/icons/surprise.svg) no-repeat center;
+    //     width: 70px;
+    //     height: 97px;
+    //     background-size: cover;
+    // }
 }
 
 .nav-adjust {

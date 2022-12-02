@@ -34,11 +34,13 @@ export class ReceiveRemarkModalPage {
     this.viewCtrl.dismiss(data);
   }
 
-  submit()
+  submit() 
   {
      let alert=this.alertCtrl.create({
         title:'Confirmation!',
-        subTitle: 'Did you receive this ' + this.redeem_type + ' ?',
+        // subTitle: 'Did you receive this ' + this.redeem_type + ' ?',
+        subTitle: 'Did you receive this Amount' + ' ?',
+
         cssClass:'action-close',
         
         buttons: [{

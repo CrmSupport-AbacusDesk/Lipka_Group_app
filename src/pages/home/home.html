@@ -142,18 +142,18 @@
                 </div>
                 <p>{{'New Arrivals' | translate}}</p>
             </li> -->
-            <li (click)="goOnOffersListPage()" *ngIf="karigar_detail.user_type!=3">
+            <!-- <li (click)="goOnOffersListPage()" *ngIf="karigar_detail.user_type!=3">
                 <div class="img-view">
                     <img src="assets/imgs/home-icon/offer.svg">
                 </div>
                 <p>{{'Offers' | translate}}</p>
-            </li>
-            <li (click)="goOnGiftGallary()" *ngIf="karigar_detail.user_type!=3">
+            </li> -->
+            <!-- <li (click)="goOnGiftGallary()" *ngIf="karigar_detail.user_type!=3">
                 <div class="img-view">
                     <img src="assets/imgs/home-icon/gift.svg">
                 </div>
                 <p>{{'Gift Gallery' | translate}}</p>
-            </li>
+            </li> -->
             <!-- goOnGiftListPage -->
             <li (click)="goRedeemType()" *ngIf="karigar_detail.user_type!=3 ">
                 <div class="img-view">
@@ -177,14 +177,14 @@
                 <div class="img-view">
                     <img src="assets/imgs/home-icon/history.svg">
                 </div>
-                <p>{{'Gift Tracker' | translate}}</p>
+                <p>{{'Redeem History' | translate}}</p>
             </li>
             
           
             <li (click)="share()" *ngIf="karigar_detail.user_type!=3">
                 <div class="img-view">
-                    <img src="assets/imgs/home-icon/gift-new.svg">
-                    <span class="custom-point">{{sharepoint}}</span>
+                    <img src="assets/imgs/home-icon/share.png">
+                    <!-- <span class="custom-point">{{sharepoint}}</span> -->
                 </div>
                 <p>{{'Share App' | translate}}</p>
             </li>

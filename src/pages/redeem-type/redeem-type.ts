@@ -76,11 +76,11 @@ cashPointLimit(){
     
     console.log(this.data.redeem_type);
     
-    if(!this.data.redeem_type){
-      this.showAlert('Please select request Type');
-      return
-    }
-    else if(this.data.redeem_type == 'Cash'){
+    // if(!this.data.redeem_type){
+    //   this.showAlert('Please select request Type');
+    //   return
+    // }
+    // else if(this.data.redeem_type == 'Cash'){}
       if(!this.data.redeem_amount){
         this.showAlert('Please fill redeem cash value');
         return
@@ -99,10 +99,10 @@ cashPointLimit(){
       let contactModal = this.modalCtrl.create(CancelpolicyModalPage,{'karigar_id':this.service.karigar_id, 'redeem_type':this.data.redeem_type, 'redeem_point':this.data.redeem_amount});
       contactModal.present();
       console.log('otp');
-    }
+   
 
-    else if (this.data.redeem_type == 'gift'){
-      this.navCtrl.push(GiftListPage,{'redeem_type':this.data.redeem_type})
-    }
+    // else if (this.data.redeem_type == 'gift'){
+    //   this.navCtrl.push(GiftListPage,{'redeem_type':this.data.redeem_type})
+    // }
   }
 }
